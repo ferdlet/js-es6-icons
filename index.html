@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Icons</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     
@@ -16,15 +19,18 @@
     <nav>
         <label for="tipo">filtra per tipo</label>
         <select id="tipo">
-            <option value="all">All</option>
-            <option value="animal">Animal</option>
-            <option value="vegetable">Vegetable</option>
-            <option value="user">User</option>
+            <option id="all" value="all">All</option>
+            <option id="animal" value="animal">Animal</option>
+            <option id="vegetable" value="vegetable">Vegetable</option>
+            <option id="user" value="user">User</option>
         </select>
     </nav>
-
-    <main></main>
-
+    <main>
+        <div id="container">
+            <!-- <div class="box"></div> -->
+            
+        </div>
+    </main>
 
     <script src="js/data.js"></script>
 </body>

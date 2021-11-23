@@ -1,4 +1,4 @@
-[
+const icone = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -112,3 +112,49 @@
 		color: 'blue'
 	}
 ];
+
+const container = document.getElementById('container');
+
+const all = document.getElementById('all');
+
+const animal = document.getElementById('animal');
+
+const vegetable = document.getElementById('vegetable');
+
+const user = document.getElementById('user');
+
+all.addEventListener("click", function(){
+	for (let i = 0; i < icone.length; i++) {
+		const box = document.createElement('div');
+		box.className = 'box';
+		const {name, prefix, type, family, color} = icone[i];
+		const icon = document.createElement('i');
+		icon.className = family + ' ' + prefix + name + ' ' + color;
+		box.appendChild(icon);
+		console.log(icon);
+		const title = document.createElement('span');
+		title.innerHTML = name;
+		box.appendChild(title);
+		container.appendChild(box);
+	}
+});
+
+animal.addEventListener("click", function () {
+	const arrayAnimal = icone.filter((animale) => {
+		return animale.type == 'animal';
+	});
+	console.log(arrayAnimal);
+	for (let i = 0; i < arrayAnimal.length; i++) {
+		const box = document.createElement('div');
+		box.className = 'box';
+		const { name, prefix, type, family, color } = icone[i];
+		const icon = document.createElement('i');
+		icon.className = family + ' ' + prefix + name + ' ' + color;
+		box.appendChild(icon);
+		console.log(icon);
+		const title = document.createElement('span');
+		title.innerHTML = name;
+		box.appendChild(title);
+		container.appendChild(box);
+	}
+});
